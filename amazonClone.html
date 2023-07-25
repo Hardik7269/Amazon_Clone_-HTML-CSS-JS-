@@ -7,6 +7,9 @@
     <title>Amazon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="homePage.css">
+    <script src="js/homepage-js.js"></script>
+    <script src="js/checkout-js.js"></script>
+
 </head>
 <body>
     <header>
@@ -54,8 +57,12 @@
             
             <div class="cart-link header-link border">
                 <div class="cart-icon">
+                  <a href="checkout.html">
                     <img class="cart-icon" src="Images\cart-icon.png">
-                    <div class="cart-quantity">3</div>
+                  </a>
+                    <div class="cart-quantity">
+                    <p class="cart-quantity-num">0</p>
+                    </div>
                 </div>
                 <div class="cart-text">Cart</div>
             </div>
@@ -109,12 +116,13 @@
                       </div>
             
                       <div class="product-price">
-                        ₹1,49,999
+                        $999.99
                       </div>
             
                       <div class="product-quantity-container">
-                        <select>
-                          <option selected value="1">1</option>
+                        <select class="quantity1" onchange="cartQuantity()">
+                          <option selected value="0">0</option>
+                          <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
@@ -153,12 +161,13 @@
                       </div>
             
                       <div class="product-price">
-                        ₹1,20,000
+                        $799.99
                       </div>
             
                       <div class="product-quantity-container">
-                        <select>
-                          <option selected value="1">1</option>
+                        <select class="quantity2" onchange="cartQuantity()">
+                          <option selected value="0">0</option>
+                          <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
@@ -172,7 +181,7 @@
                         Added
                       </div>
             
-                      <button class="add-to-cart-button button-primary">
+                      <button class="add-to-cart-button button-primary" onclick="lg()">
                         Add to Cart
                       </button>
                 </div>
@@ -201,8 +210,9 @@
                       </div>
             
                       <div class="product-quantity-container">
-                        <select>
-                          <option selected value="1">1</option>
+                        <select class="quantity3" onchange="cartQuantity()">
+                          <option selected value="0">0</option>
+                          <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
